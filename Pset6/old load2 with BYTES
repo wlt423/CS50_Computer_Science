@@ -1,0 +1,33 @@
+{
+    // Length is going to hold how many bytes
+    // content holds all the info from file
+    // file is the already opend stream
+    // realloc: void* realloc( void* ptr, size);
+    
+    printf("start load");
+
+    unsigned int count = 0;
+
+    BYTE* buffer = malloc(BYTES);
+
+    if(buffer == NULL)
+    {
+        return false;
+    }
+
+    while( fread( &buffer[counter], BYTES , 1, file) != 0)
+    {
+        count ++;
+        buffer = realloc( buffer, BYTES * (counter + 1) );
+
+        if(buffer == NULL)
+        {
+            return false;
+        }
+    }
+    printf("%i\n", counter);
+    *length = counter;
+    *content = buffer;
+    printf("end load");
+    return true;
+}

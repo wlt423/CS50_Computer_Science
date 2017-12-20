@@ -1,0 +1,99 @@
+ 
+    /*char* to_return;
+    int i = 0;
+    
+    // iterate over string looking for file extension
+    while (i != -1)
+    {
+        
+        // check if html
+        if (path[i] == '.' && tolower(path[i + 1]) == 'h' && 
+        tolower(path[i + 2]) == 't' && tolower(path[i + 3]) == 'm' &&
+        tolower(path[i + 4]) == 'l')
+        {
+            *file_ext = ".html";
+            *to_return = "text/html";
+            printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+            return to_return;
+        
+        }
+        
+        // check if js
+        else if (path[i] == '.' && tolower(path[i + 1]) == 'j' && 
+        tolower(path[i + 2]) == 's' && path[i + 3] == '\0')
+        {
+            *file_ext = ".js";
+            *to_return = "text/javascript";
+            printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+            return to_return;
+        }
+        
+        // save other file extensions
+        else if (path[i] == '.' && path[i + 4] == '\0')
+        {
+            *(file_ext + 0) = '.';
+            *(file_ext + 1) = tolower(path[i + 1]);
+            printf("%c\n", file_ext[1]);
+            *(file_ext + 2) = tolower(path[i + 2]);
+            printf("%c\n", file_ext[2]);
+            *(file_ext + 3) = tolower(path[i + 3]);
+            printf("%c\n", file_ext[3]);
+            *(file_ext + 4) = '\0';
+            i = -2;
+        }
+        i++;
+    }
+    
+    // check for each other type
+    if (strcmp(file_ext, ".css"))
+    {
+        *to_return = "text/css";
+        printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+        return to_return;
+    }
+    else if (strcmp(file_ext, ".gif"))
+    {
+        *to_return = "image/gif";
+        printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+        return to_return;
+    }
+    else if (strcmp(file_ext, ".ico"))
+    {
+        *to_return = "image/x-icon";
+        printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+        return to_return;
+    }
+    else if (strcmp(file_ext, ".jpg"))
+    {
+        *to_return = "image/jpeg";
+        printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+        return to_return;
+    }
+    else if (strcmp(file_ext, ".php"))
+    {
+        *to_return = "text/x-php";
+        printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+        return to_return;
+    }
+    else if (strcmp(file_ext, ".png"))
+    {
+        *to_return = "image/png";
+        printf("file_ext = %s\n", file_ext);
+            printf("to_return = %s\n", to_return);
+        return to_return;
+    }
+    else
+    {
+        printf("returning NULL");
+        return NULL;
+    }
+    printf("returning NULL");
+    return NULL;
+}
