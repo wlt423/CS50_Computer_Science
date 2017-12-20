@@ -1,0 +1,40 @@
+0.  a lung disease, longest dictionary word
+
+1.  returns resource usage for processes called by particular processes
+
+2.  16
+
+3.  struct pointer is specified input of getrudage
+
+4.  The for loop iterates through the text file character by character,
+appending each to the last until a word is formed. Cecks are made to ensure 
+that non alpha characters are ignored except for apostrophes and that the string
+of characters does not exceed max word legnth. When complete word is formed, there
+is reindexing to begin again.
+A word count also count the total number of words.  When the word is formed, 
+a timed check function determines if it is misspelled.  It then updates the benchmark
+and prints the misspelled word.
+
+5.  Doing it this way allows the program to check character by character whether
+it is alpha. fgetc doesn't ignore whitespaceAlso, if done with strings, how long 
+would the strings be.  If a fixed length theycould potentially end in the middle
+of a word.  Perhaps it could be done another way,but char by char ensures it 
+fuctions smoothly.
+
+6.  so that they cannot be changed, only read.
+
+7.  I used a hash table of size 27 with the 26 letters of the alphabet. 
+UPDATE I am now using a hash table of size 104729 which is a prime in the
+vicinity of the dictionary size.  I landed on this value through trial and error,
+testing both primes and powers of 2.
+
+8.  Using the above hash table, I'm going to guess that it wasn't very fast. 
+I'm going to submit now that it is working perfectly, but I will be attempting
+a faster hash table.
+UPDATE The newest submission is 4 seconds faster.  My best runtime on AustinPowers is .05
+
+9.  Working on it...UPDATE I used a multiplicative hash function with numbers popularized
+by Dan Bernstein 5381 and 33.  As stated above I tried various table sizes.
+
+10. the hash table itself, I would like to expand it so that the length of the 
+linked lists is much shorter. UPDATE This has been completed.
