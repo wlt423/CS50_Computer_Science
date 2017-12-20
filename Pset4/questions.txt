@@ -1,0 +1,47 @@
+0.  BMP +4 billion
+    GIF 256 colors
+    JPEG 16.7 million colors
+    PNG  16.7 million colors
+    
+1.  GIF
+
+2.  When uncompressed files compressed with lossless compression retain all of their original data.  Lossy compression loses some of the data in the compression process,
+thus sacrificing a certain amount of quality for compression.
+
+3.  JPEG
+
+4.  The directory entry in the FAT is changed for the file, and the files FAT clusters are moved to a free list.
+The actual file is not changed, only the "pointer" to it.
+
+5.  Overwrite the information with a sanitization tool.
+
+6.  A header that provides typedefs that specify exact width integer types, as well as min and max values for ach type.
+
+7.  You can use these specifications to make a program more portable across architectures, because the memory usage of a particular variable is fixed at a certain length.
+
+8.  BYTE    1 byte
+    DWORD   4 bytes
+    LONG    4 bytes
+    WORD    2 bytes
+    This assumes a standard 32 but architecture.  Word lenght can vary depending on the architecture, hence the use of the above typedefs.
+    
+9.  bfType of 19778 or 0x424d in hex
+
+10. bfSize is the size of the file, whereas biSize is the size of BITMAPINFOHEADER.
+
+11. If biHeight is negative, the bmp is top down with the origin at the top left hand corner.
+
+12. biBitCount
+
+13. It will return NULL if the file could not be succesfully opened; this may happen if the operating system is out of memory or 
+if we lack the proper permissions to open the file.
+
+14. So that it reads one element at a time, in our case a struct.
+
+15. 3 bytes
+
+16. Fseek moves to specific place in the file.
+
+17. This is the offset relative to the current position that the fseek function uses.
+
+18. Rick Astley
